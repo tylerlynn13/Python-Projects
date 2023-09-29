@@ -120,7 +120,7 @@ def reset(nice,mean,name):
     nice = 0
     mean = 0
     #notice, I do not reset the name varuable as that same user has selected to play again
-    start(nie,mean,name)
+    start(nice,mean,name)
     
 
 
