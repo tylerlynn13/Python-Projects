@@ -10,29 +10,38 @@ class Vehicle:
     def move(self):
         print("Beep Beep Move!")
 
-#first child class
-#while learning this part of program found pass,and wanted to include
-class Car(Vehicle):
-    pass
+
+#first class
+
+class Boat(Vehicle):
+    def __init__(self, brand, model, color, passengers):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.passengers = passengers
+    def move(self):
+        print("Sail around the world!")
+        
 
 #second class
 
-class Boat(Vehicle):
-    def move(self):
-        print("Sail around the world!")
-
-#third and final class
-
 class Plane(Vehicle):
+    def __init__(self, brand, model, color, passengers):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.passengers = passengers
     def move(self):
         print("Fly like eagle!")
+        
 
-car1 = Car("Ford", "Mustang")
-boat1 = Boat("Ibiza", "Touring 20")
-plane1 = Plane("Boeing", "747")
+boat1 = Boat("Ibiza", "Touring 20", "Blue", "eight")
+plane1 = Plane("Boeing", "747", "Pink", "six")
 
 
-for x in (car1, boat1, plane1):
+for x in (boat1, plane1):
     print(x.brand)
     print(x.model)
+    print(x.color)
+    print(x.passengers)
     x.move()
