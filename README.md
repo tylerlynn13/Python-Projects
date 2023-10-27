@@ -1,2 +1,4 @@
 # Python-Projects
-Projects I have done with Python
+These are basic python projects written in Python, also using various models such as, tkinter, venv, and sqlite3.
+Projects:
+
