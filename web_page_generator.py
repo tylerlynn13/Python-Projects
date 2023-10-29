@@ -17,6 +17,9 @@ class ParentWindow(Frame):
         self.btn = Button(self.master, text="Submit Custom Text", width=30, height=2, command=self.customText)
         self.btn.grid(row= 0, column= 1, padx=(20, 20) , pady=(20, 20))
 
+
+        self.txt = tk.Entry(self.master,text='')
+        self.txt.grid(row=1, column=0, rowspan=3, columnspan=7, padx=(30,40), pady=(0,0), sticky=N+E+W)
  
 
 
@@ -34,8 +37,13 @@ class ParentWindow(Frame):
         webbrowser.open_new_tab("index.html")
 
     def customText(self):
-        self.txt = tk.Entry(self.master,text='')
-        self.txt.grid(row=1, column=0, rowspan=3, columnspan=7, padx=(30,40), pady=(0,0),sticky=N+E+W)
+        htmlText = ""
+        htmlFile = open("index.html", "w")
+        htmlContent = "<html>\n<body>\n<h1>" + htmlText + "</h1>\n</body>\n</html>"
+        htmlFile.write(htmlContent)
+        htmlFile.close()
+        webbrowser.open_new_tab("index.html")
+
 
 
 
