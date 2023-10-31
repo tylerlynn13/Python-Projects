@@ -8,6 +8,7 @@ import time
 import glob
 
 
+
 class ParentWindow(Frame):
     def __init__(self, master):
         Frame.__init__(self)
@@ -70,20 +71,20 @@ class ParentWindow(Frame):
         #the .insert method will insert the user selection to the destination_dir entry widget
         self.destination_dir.insert(0, selectDestDir)
 
-    #creates function to tranfer files from one directory to another
+    #  creates function to tranfer files from one directory to another
     def transferFiles(self):
-        #gets source directory
+        #  gets source directory
         source = self.source_dir.get()
-        #get destination directory
+        #  get destination directory
         destination = self.destination_dir.get()
-        #gets a list of files in the source directory
-        source_files = os.listdir(source)
-        #runs through each file in the source directory
+        #  gets a list of files in the source directory
+        source_files = s
+
+        #  runs through each file in the source directory
         for i in source_files:
-            modifyDate = datetime.fromtimestamp(os.path.getmtime(source_files_return))
+            modifyDate = datetime.fromtimestamp(os.path.getmtime(source_files))
             todaysDate = datetime.today()
 
-            modifyDateLimit > todaysDate;
             shutil.move(source + '/' + i, destination.get())
             print(i + 'was successfully transferred.')
                 
