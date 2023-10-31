@@ -78,7 +78,7 @@ class ParentWindow(Frame):
         #  get destination directory
         destination = self.destination_dir.get()
         #  gets a list of files in the source directory
-        source_files = s
+        source_files = self.source_dir.get()
 
         #  runs through each file in the source directory
         for i in source_files:
