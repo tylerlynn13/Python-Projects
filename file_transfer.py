@@ -78,15 +78,15 @@ class ParentWindow(Frame):
         #  get destination directory
         destination = self.destination_dir.get()
         #  gets a list of files in the source directory
-        source_files = self.source_dir.get()
+        source_files = os.listdir(source)
 
         #  runs through each file in the source directory
         for i in source_files:
-            modifyDate = datetime.fromtimestamp(os.path.getmtime(source_files))
-            todaysDate = datetime.today()
-
-            shutil.move(source + '/' + i, destination.get())
-            print(i + 'was successfully transferred.')
+            modifyDate = datetime.fromtimestamp(os.path.getmtime(os.path.join(source, i )))
+            todaysDate = datetime.today() - timedelta(hours=24)
+            if modifyDate > todaysDate:
+                shutil.move(source + '/' + i, destination)
+                print(i + 'was successfully transferred.')
                 
 
 
